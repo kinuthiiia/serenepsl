@@ -1,7 +1,11 @@
+import { IconArrowRight, IconDiamond, IconStar } from "@tabler/icons";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { Footer, Header, Testimonial } from "../components";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <div>
       <Head>
@@ -10,108 +14,205 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* Header section */}
-      <Header />
-
-      {/* Landing section */}
-      <div>
-        {/* Left */}
-        <div>
-          <p>Safety first</p>
-          <h1>Fire Equipment & Services</h1>
-          <p>
-            Serene products & services deals with sale, servicing and
-            maintenance of fire engineering systems, generators, solar,
-            electrical, safety audits and trainings
-          </p>
-        </div>
-
-        {/* Right */}
-        <img src="/favicon.ico" alt="landing" />
-      </div>
-
-      {/* Content */}
-      <div>
-        {/* What we do */}
-        <div>
-          <p>What we do</p>
-          <div>
-            {/* Left */}
-            <div>
-              <h1>Fire Systems & Safety Training</h1>
-              <p>
-                Serene products and servicing deals with sale, servicing and
-                maintenance of fire engineering systems, generators, solar,
-                electrical, safety audits and trainings.
-              </p>
-              <br />
-              <p>
-                We offer high quality fire products that are manufactured to
-                international standards such as :
-              </p>
-              <br />
-              <span>&bull; British Standards (BS)</span>
-              <span>&bull; European Standards (BS)</span>
-              <span>&bull; Underwriter Laboratory Standards</span>
-              <span>&bull; Kenya Bureau of Standards (KEBS)</span>
-            </div>
-
-            {/* Right */}
-            <div>
-              <img src="/favicon.ico" alt="what_we_do_1" />
-              <img src="/favicon.ico" alt="what_we_do_2" />
-            </div>
+      <Header active="home" />
+      <main className="bg-[#f1f1f1]">
+        {/* Landing section */}
+        <div className="sm:flex sm:justify-between">
+          {/* Left */}
+          <div className="p-12 space-y-4 sm:w-1/2">
+            <p className="tracking-wide uppercase text-[0.7rem] text-[#d32131]">
+              Safety first
+            </p>
+            <h1 className="font-[Oswald] text-[2.4rem] sm:text-[3rem] tracking-tighter">
+              Fire Equipment & Services
+            </h1>
+            <p className="text-[0.8rem] text-gray-600 font-[300]">
+              Serene products & services deals with sale, servicing and
+              maintenance of fire engineering systems, generators, solar,
+              electrical, safety audits and trainings.
+            </p>
           </div>
-          <button>learn more</button>
+
+          {/* Right */}
+          <img
+            src="/illustration.png"
+            className=" w-4/5 mx-auto mt-[-36px] sm:w-1/3"
+            alt="landing"
+          />
         </div>
 
-        {/* Products catalogue */}
-        <div>
-          <p>Products catalogue</p>
+        {/* Content */}
+        <div className="mx-6 sm:mx-12 bg-white p-12">
+          {/* What we do */}
           <div>
-            {[1, 2, 3].map((el) => (
-              <div>
-                <img src="/favicon.ico" alt={`product_${el}`} />
-                <div>
-                  <h1>Powdered fire extinguisher</h1>
-                  <a href={`/products/#${el}`}>Learn more </a>
+            <p className="tracking-wide uppercase text-[0.7rem] text-[#d32131]">
+              What we do
+            </p>
+            <div className="sm:flex sm:justify-between">
+              {/* Left */}
+              <div className="sm:w-1/2 w-full">
+                <h1 className="font-[Oswald] text-[2rem] tracking-tighter mb-8">
+                  Fire Systems & Safety Training
+                </h1>
+                <p className="text-[0.8rem] text-gray-600 font-[300]">
+                  Serene products and servicing deals with sale, servicing and
+                  maintenance of fire engineering systems, generators, solar,
+                  electrical, safety audits and trainings.
+                </p>
+                <br />
+                <p className="text-[0.8rem] text-gray-600 font-[300]">
+                  We offer high quality fire products that are manufactured to
+                  international standards such as :
+                </p>
+                <br />
+                <div className="space-y-2">
+                  <span className="block text-gray-800 text-[0.8rem]">
+                    <IconStar
+                      fill="#d32131"
+                      stroke={0}
+                      size={12}
+                      className="inline mr-4"
+                    />
+                    British Standards (BS)
+                  </span>
+                  <span className="block text-gray-800 text-[0.8rem]">
+                    <IconStar
+                      fill="#d32131"
+                      stroke={0}
+                      size={12}
+                      className="inline mr-4"
+                    />
+                    European Standards (BS)
+                  </span>
+                  <span className="block text-gray-800 text-[0.8rem]">
+                    <IconStar
+                      fill="#d32131"
+                      stroke={0}
+                      size={12}
+                      className="inline mr-4"
+                    />
+                    Underwriter Laboratory Standards
+                  </span>
+                  <span className="block text-gray-800 text-[0.8rem]">
+                    <IconStar
+                      fill="#d32131"
+                      stroke={0}
+                      size={12}
+                      className="inline mr-4"
+                    />
+                    Kenya Bureau of Standards (KEBS)
+                  </span>
                 </div>
               </div>
+
+              {/* Right */}
+              <div className="sm:w-1/2 w-full ">
+                <img
+                  src="/fire-extig.jpg"
+                  alt="what_we_do_1"
+                  className="z-1  sm:w-3/4 w-full r-0"
+                />
+              </div>
+            </div>
+            <button
+              onClick={() => router.push("/services")}
+              className="sm:mt-12 w-1/2 py-4 px-6 bg-[#d32131] text-white text-[0.7rem] uppercase"
+            >
+              learn more
+            </button>
+          </div>
+
+          {/* Products catalogue */}
+          <div className="mt-12 space-y-8">
+            <p className="tracking-wide uppercase text-[0.7rem] text-[#d32131]">
+              Products catalogue
+            </p>
+            <div className="flex space-x-4 overflow-x-auto h-[150px] ">
+              {[
+                {
+                  name: "Powdered fire extinguisher",
+                  photo: "/product-1.webp",
+                },
+                {
+                  name: "Fire blanket 1.2m x 1.2m",
+                  photo: "/product-2.webp",
+                },
+                {
+                  name: "Rubber delivery hose(30m)",
+                  photo: "/product-3.jpg",
+                },
+              ].map((obj, i) => (
+                <div className="flex shadow-md px-5 space-x-4 min-w-[300px] h-[120px] my-auto">
+                  <img
+                    src={obj.photo}
+                    style={{
+                      width: 100,
+                      height: 100,
+                    }}
+                    alt={`product_${i}`}
+                  />
+                  <div className="my-auto">
+                    <h1 className="font-[Oswald] text-[1.2rem] mb-2">
+                      {obj.name}
+                    </h1>
+                    <a
+                      className="text-[#d32121] font-[300] uppercase text-[0.7rem]"
+                      href={`/products/#${i}`}
+                    >
+                      Learn more <IconArrowRight className="inline" size={12} />{" "}
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="w-full flex flex-row-reverse">
+              <button
+                onClick={() => router.push("/products")}
+                className="uppercase text-[#d32121] font-[300] text-[0.8rem]"
+              >
+                see all products
+              </button>
+            </div>
+          </div>
+
+          {/* About Us */}
+          <div className="mt-12">
+            <p className="w-full uppercase tracking-wide text-[0.7rem] text-[#d32131] text-center">
+              About us
+            </p>
+            <h1 className="w-full text-center font-[Oswald]">Our story</h1>
+            <br />
+            <p className="text-[0.8rem] text-gray-600 font-[300]">
+              Serene products & services deals with sale, servicing and
+              maintenance of fire engineering systems, generators, solar,
+              electrical, safety audits and trainings.. We supply business
+              customers, public bodies and organizations but also welcome
+              individual end customers. Customers receive perfect customer care
+              from us whether they purchase one fire extinguisher or a thousand.
+              This focus on saving customers money and offering good value with
+              reliable nationwide customer service has won us new clients as
+              well as recurring business from existing ones.
+            </p>
+          </div>
+        </div>
+
+        {/* Testimonials */}
+        <div className="sm:mx-12 mx-5 sm:p-12 p-5 sm:mt-12 mt-6">
+          <p className="uppercase tracking-wide text-[0.7rem] text-[#d32131]">
+            Testimonials
+          </p>
+          <h1 className="w-full mt-4 font-[Oswald]">
+            What our clients are saying
+          </h1>
+          <br />
+          <div className="h-[250px] flex justify-between space-x-6 mt-6 overflow-x-auto">
+            {[1, 2, 3].map((el) => (
+              <Testimonial />
             ))}
           </div>
-
-          <div>
-            <button>see all products</button>
-          </div>
         </div>
-
-        {/* About Us */}
-        <div>
-          <p>About us</p>
-          <h1>Our story</h1>
-          <br />
-          <p>
-            Serene products & services deals with sale, servicing and
-            maintenance of fire engineering systems, generators, solar,
-            electrical, safety audits and trainings.. We supply business
-            customers, public bodies and organizations but also welcome
-            individual end customers. Customers receive perfect customer care
-            from us whether they purchase one fire extinguisher or a thousand.
-            This focus on saving customers money and offering good value with
-            reliable nationwide customer service has won us new clients as well
-            as recurring business from existing ones.
-          </p>
-        </div>
-      </div>
-
-      {/* Testimonials */}
-      <div>
-        <p>Testimonials</p>
-        <h1>What our clients are saying</h1>
-        <br />
-        {[1, 2, 3].map((el) => (
-          <Testimonial />
-        ))}
-      </div>
+      </main>
 
       {/* Footer */}
       <Footer />
