@@ -142,7 +142,10 @@ export default function Home() {
                   photo: "/product-3.jpg",
                 },
               ].map((obj, i) => (
-                <div className="flex shadow-md px-5 space-x-4 min-w-[300px] h-[120px] my-auto">
+                <div
+                  key={i}
+                  className="flex shadow-md px-5 space-x-4 min-w-[300px] h-[120px] my-auto"
+                >
                   <img
                     src={obj.photo}
                     style={{
