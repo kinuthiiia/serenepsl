@@ -17,7 +17,7 @@ export default function Services() {
         <div className=" p-6 md:p-12 space-y-6">
           {/* Product list */}
           {[1, 2, 3, 4, 5].map((el) => (
-            <Service />
+            <Service key={el} />
           ))}
         </div>
       </div>

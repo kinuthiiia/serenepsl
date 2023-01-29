@@ -5,6 +5,7 @@ import {
   IconBrandTwitter,
   IconPhone,
 } from "@tabler/icons";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -57,27 +58,27 @@ export default function Footer() {
         {/* Right */}
         <Space h={36} />
         <div className="space-y-6 mx-auto">
-          <a href="/" className="uppercase text-gray-400 block">
+          <Link href="/" className="uppercase text-gray-400 block">
             home
-          </a>
-          <a href="/services" className="uppercase text-gray-400 block">
+          </Link>
+          <Link href="/services" className="uppercase text-gray-400 block">
             services
-          </a>
-          <a href="/products" className="uppercase text-gray-400 block">
+          </Link>
+          <Link href="/products" className="uppercase text-gray-400 block">
             products
-          </a>
-          <a href="/training" className="uppercase text-gray-400 block">
+          </Link>
+          <Link href="/training" className="uppercase text-gray-400 block">
             training
-          </a>
+          </Link>
         </div>
       </div>
 
       <div className="w-full mt-12">
         <p className="w-full text-center text-[0.9rem] text-gray-400">
           Copyright © 2023. See{" "}
-          <a href="https://stevekinuthia.vercel.app" className="underline">
+          <Link href="https://stevekinuthia.vercel.app" className="underline">
             developer
-          </a>
+          </Link>
         </p>
       </div>
     </div>

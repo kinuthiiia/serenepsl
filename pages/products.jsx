@@ -17,7 +17,7 @@ export default function Products() {
         <div className=" p-6 md:p-12 space-y-6">
           {/* Product list */}
           {[1, 2, 3, 4, 5].map((el) => (
-            <Product />
+            <Product key={el} />
           ))}
         </div>
       </div>

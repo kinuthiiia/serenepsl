@@ -208,7 +208,7 @@ export default function Home() {
           <br />
           <div className="h-[250px] flex justify-between space-x-6 mt-6 overflow-x-auto">
             {[1, 2, 3].map((el) => (
-              <Testimonial />
+              <Testimonial key={el} />
             ))}
           </div>
         </div>

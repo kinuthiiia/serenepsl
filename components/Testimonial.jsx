@@ -11,7 +11,8 @@ export default function Testimonial() {
           className="font-[300] text-gray-600 text-sm"
           cite="http://www.worldwildlife.org/who/index.html"
         >
-          "For 50 years, WWF has been protecting the future of nature. The ."
+          &quot;For 50 years, WWF has been protecting the future of
+          nature.&quot;
         </blockquote>
         <div className="w-full">
           <h1 className="font-[Oswald] text-[1rem] text-right">James Karani</h1>

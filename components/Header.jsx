@@ -1,4 +1,5 @@
 import { IconPhone } from "@tabler/icons";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Header({ active }) {
@@ -43,7 +44,7 @@ export default function Header({ active }) {
         id="navbar-default"
       >
         <nav className="md:space-x-12 pt-12  rounded-md md:bg-transparent md:rounded-none p-4 md:pt-12">
-          <a
+          <Link
             className={
               active == "home"
                 ? "block md:inline bg-[#d32121] md:bg-transparent text-center text-white text-md py-3 rounded  mx-6 md:text-[#d32121] uppercase outline-none"
@@ -52,8 +53,8 @@ export default function Header({ active }) {
             href="/"
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             className={
               active == "services"
                 ? "block md:inline bg-[#d32121] md:bg-transparent text-center text-white text-md py-3 rounded  mx-6 md:text-[#d32121] uppercase outline-none"
@@ -62,8 +63,8 @@ export default function Header({ active }) {
             href="/services"
           >
             Services
-          </a>
-          <a
+          </Link>
+          <Link
             className={
               active == "products"
                 ? "block md:inline bg-[#d32121] md:bg-transparent text-center text-white text-md py-3 rounded outline-none mx-6 md:text-[#d32121] uppercase"
@@ -72,8 +73,8 @@ export default function Header({ active }) {
             href="/products"
           >
             Products
-          </a>
-          <a
+          </Link>
+          <Link
             className={
               active == "training"
                 ? "block md:inline bg-[#d32121] md:bg-transparent text-center text-white text-md  outline-none py-3 rounded  mx-6 md:text-[#d32121] uppercase"
@@ -82,7 +83,7 @@ export default function Header({ active }) {
             href="/training"
           >
             Training
-          </a>
+          </Link>
         </nav>
         {/* Contacts */}
         <div className=" w-full justify-around px-[64px] flex float-right space-x-6 p-8 bg-white md:bg-transparent uppercase outline-none">

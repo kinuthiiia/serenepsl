@@ -17,11 +17,11 @@ export default function Services() {
 
         <div className="px-6 sm:px-12 md:px-24">
           <p className="text-[0.8rem] text-gray-600 font-[300] mt-12">
-            We've taken the knowledge we have gained from countless inspections
-            and years in the field and created a real-world curriculum to help
-            you maintain safety compliance. Our curriculum is rooted with tips
-            and guidance on how to complete the inspections as efficiently and
-            effectively as possible.
+            We&apos;ve taken the knowledge we have gained from countless
+            inspections and years in the field and created a real-world
+            curriculum to help you maintain safety compliance. Our curriculum is
+            rooted with tips and guidance on how to complete the inspections as
+            efficiently and effectively as possible.
           </p>
 
           <p className="text-[0.8rem] text-gray-600 font-[300] mt-4">
@@ -100,7 +100,7 @@ export default function Services() {
             </h1>
 
             {[1, 2, 3, 4].map((el) => (
-              <Benefit />
+              <Benefit key={el} />
             ))}
           </div>
         </div>
