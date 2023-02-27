@@ -7,6 +7,7 @@ import {
   IconPhoneCall,
 } from "@tabler/icons";
 import { useMediaQuery } from "@mantine/hooks";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -60,30 +61,30 @@ export default function Footer() {
             </h1>
 
             <div className="space-y-3">
-              <a
+              <Link
                 href="/home"
                 className="text-gray-400 ml-6 font-[0.7rem] block"
               >
                 Home
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/services"
                 className="text-gray-400 ml-6 font-[0.7rem] block"
               >
                 Services
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/products"
                 className="text-gray-400 ml-6 font-[0.7rem] block"
               >
                 Products
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/products"
                 className="text-gray-400 ml-6 font-[0.7rem] block"
               >
                 Training
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -93,12 +94,12 @@ export default function Footer() {
                 Follow Us:
               </h1>
               <div className="flex my-12 space-x-8">
-                <a href="#">
+                <Link href="#">
                   <IconBrandFacebook color="white" />
-                </a>
-                <a href="#">
+                </Link>
+                <Link href="#">
                   <IconBrandLinkedin color="white" />
-                </a>
+                </Link>
               </div>
             </div>
             <Divider
@@ -135,7 +136,11 @@ export default function Footer() {
         </span>
         <span class="text-white text-[0.7rem] font-light">
           See{" "}
-          <a href="https://stevekinuthia.vercel.app" target="_blank">
+          <a
+            href="https://stevekinuthia.vercel.app"
+            rel="noreferrer"
+            target="_blank"
+          >
             developer
           </a>
         </span>

@@ -119,7 +119,7 @@ export default function Header({ active }) {
           <div class="flex items-center space-x-1">
             <ul class="hidden space-x-2 md:inline-flex">
               <li>
-                <a
+                <Link
                   href="/"
                   class={
                     active == "home"
@@ -128,10 +128,10 @@ export default function Header({ active }) {
                   }
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/services"
                   class={
                     active == "services"
@@ -140,10 +140,10 @@ export default function Header({ active }) {
                   }
                 >
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/products"
                   class={
                     active == "products"
@@ -152,10 +152,10 @@ export default function Header({ active }) {
                   }
                 >
                   Products
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/training"
                   class={
                     active == "training"
@@ -164,19 +164,19 @@ export default function Header({ active }) {
                   }
                 >
                   Training
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#contact-us"
                   class="px-4 py-2 font-semibold text-gray-500 rounded"
                 >
                   Contact Us
-                </a>
+                </Link>
               </li>
             </ul>
             <div class="inline-flex md:hidden">
-              <button class="flex-none px-2 ">
+              <button class="flex-none px-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="w-6 h-6"
@@ -195,12 +195,12 @@ export default function Header({ active }) {
               </button>
               {/* Put list item */}
 
-              <div>
+              {/* <div>
                 <ul>
                   <li>hey</li>
                   <li>there</li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

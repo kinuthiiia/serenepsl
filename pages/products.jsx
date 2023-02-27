@@ -17,7 +17,10 @@ const items = [
   { title: "Fire alarm systems", href: "#" },
   { title: "Addressable fire alarm systems", href: "#" },
 ].map((item, index) => (
-  <span className="text-[0.9rem] font-light text-gray-500 cursor-pointer">
+  <span
+    key={index}
+    className="text-[0.9rem] font-light text-gray-500 cursor-pointer"
+  >
     {item.title}
   </span>
 ));

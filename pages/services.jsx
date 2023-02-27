@@ -189,6 +189,7 @@ export default function Services() {
                 },
               ].map((service) => (
                 <MiniService
+                  key={service}
                   label={service.title}
                   icon={service.icon}
                   description={service.description}
