@@ -7,13 +7,16 @@ export default function Services() {
       <Header active="training" />
 
       {/* Content */}
-      <div className="bg-[#f1f1f1]">
-        <p className="uppercase tracking-wide text-[0.7rem] text-[#d32131] w-full text-center pt-8 m-0">
-          training
-        </p>
-        <h1 className="w-full font-[Oswald] text-center mt-2">
-          We train on fire safety and inspection
-        </h1>
+      <div>
+        <div>
+          <p className="w-full  text-center tracking-wide uppercase text-[1.2rem] text-black font-extrabold  ">
+            Training
+          </p>
+          <p className="text-gray-500 w-full text-center font-light text-[0.9rem]">
+            We train on fire safety drills and inspection
+          </p>
+          <div className="w-[70px] h-[4px] bg-[#d32131]  mx-auto mt-2" />
+        </div>
 
         <div className="px-6 sm:px-12 md:px-24">
           <p className="text-[0.8rem] text-gray-600 font-[300] mt-12">

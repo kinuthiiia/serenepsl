@@ -1,8 +1,8 @@
 export default function Testimonial() {
   return (
-    <div className="min-w-[300px] h-[180px] shadow-xl p-3 flex space-x-6 ">
+    <div className="col-span-1 p-3 flex space-x-6 ">
       <img
-        style={{ height: 100, width: 100 }}
+        style={{ height: 80, width: 80 }}
         src="/favicon.ico"
         alt="customer_img"
       />

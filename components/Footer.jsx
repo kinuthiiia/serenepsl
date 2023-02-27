@@ -1,86 +1,145 @@
-import { Space } from "@mantine/core";
+import { Button, Divider, Input, Space, Textarea } from "@mantine/core";
 import {
   IconBrandFacebook,
   IconBrandLinkedin,
-  IconBrandTwitter,
-  IconPhone,
+  IconLocation,
+  IconLockOpen,
+  IconPhoneCall,
 } from "@tabler/icons";
-import Link from "next/link";
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function Footer() {
   return (
-    <div className="bg-[#212530] w-full p-8 md:p-24">
-      <div className="md:flex md:justify-between">
-        {/* Left */}
-        <div className="md:w-1/2 space-y-4">
-          <h1 class="text-white font-[Oswald] text-[1.3rem] md:text-[2rem]">
-            Serene Products & Services
-          </h1>
-          <p className="text-gray-600">
-            Ruiru , Opp Shell petrol station. Sanfred building , 1st floor
-          </p>
-          <div className=" flex space-x-3 md:space-x-6 py-8">
-            <button className="py-4 px-6 border border-gray-400 flex text-white">
-              <IconPhone
-                size={20}
-                fill="#d32131"
-                stroke={0}
-                style={{ marginRight: 6 }}
-              />{" "}
-              0740650480
-            </button>
-            <button className="py-4 px-6 bg-[#d32131] text-white font-[300] uppercase">
-              contact us
-            </button>
+    <>
+      <div className="bg-[#212530] w-full p-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="col-span-1 space-x-3 px-8 py-2 flex">
+            <IconPhoneCall color="red" stroke={0.7} size={26} />
+            <h1 className="text-[1.1rem] font-[Oswald] text-white">Call Us</h1>
+            <p className="text-white font-light text-[0.8rem] mt-1 ml-6">
+              0740 650 480
+            </p>
           </div>
-          <div className="space-x-6 flex">
-            <a
-              href="#"
-              className="w-[48] h-[48] text-white border border-[white] rounded-3xl p-2"
-            >
-              <IconBrandTwitter stroke={1} />
-            </a>
-            <a
-              href="#"
-              className="w-[48] h-[48] text-white border border-[white] rounded-3xl p-2"
-            >
-              <IconBrandFacebook stroke={1} fill="#ffffff" />
-            </a>
-            <a
-              href="#"
-              className="w-[48] h-[48] text-white border border-[white] rounded-3xl p-2"
-            >
-              <IconBrandLinkedin />
-            </a>
+
+          <div className="col-span-1 space-x-3 px-8 py-2 flex">
+            <IconLocation color="red" stroke={0.7} size={26} />
+            <h1 className="text-[1.1rem] font-[Oswald] text-white">
+              Office Address
+            </h1>
+            <p className="text-white font-light text-[0.8rem] mt-1 ml-6">
+              Ruiru Town, Kenya
+            </p>
+          </div>
+
+          <div className="col-span-1 space-x-3 px-8 py-2 flex">
+            <IconLockOpen color="red" stroke={0.7} size={26} />
+            <h1 className="text-[1.1rem] font-[Oswald] text-white">
+              Working Time
+            </h1>
+            <p className="text-white font-light text-[0.8rem] mt-1 ml-6">
+              Mon-Fri : 8:00 AM - 5:00 PM
+            </p>
           </div>
         </div>
+        <Space h={60} />
+        <div className="md:flex justify-between w-full">
+          <div className=" w-full md:w-1/4 space-y-3">
+            <h1 className="text-[1.1rem] font-[Oswald] text-white">About Us</h1>
 
-        {/* Right */}
-        <Space h={36} />
-        <div className="space-y-6 mx-auto">
-          <Link href="/" className="uppercase text-gray-400 block">
-            home
-          </Link>
-          <Link href="/services" className="uppercase text-gray-400 block">
-            services
-          </Link>
-          <Link href="/products" className="uppercase text-gray-400 block">
-            products
-          </Link>
-          <Link href="/training" className="uppercase text-gray-400 block">
-            training
-          </Link>
+            <p className="text-gray-400 font-light text-[0.8rem]">
+              Serene products & services deals with sale, servicing and
+              maintenance of fire engineering systems, generators, solar,
+              electrical, safety audits and trainings.
+            </p>
+
+            <img src="/logo.svg" alt="logo" />
+          </div>
+          <div className="w-full md:w-1/4 space-y-3 mt-12 md:mt-0">
+            <h1 className="text-[1.1rem] font-[Oswald] text-white">
+              Quick Links
+            </h1>
+
+            <div className="space-y-3">
+              <a
+                href="/home"
+                className="text-gray-400 ml-6 font-[0.7rem] block"
+              >
+                Home
+              </a>
+              <a
+                href="/services"
+                className="text-gray-400 ml-6 font-[0.7rem] block"
+              >
+                Services
+              </a>
+              <a
+                href="/products"
+                className="text-gray-400 ml-6 font-[0.7rem] block"
+              >
+                Products
+              </a>
+              <a
+                href="/products"
+                className="text-gray-400 ml-6 font-[0.7rem] block"
+              >
+                Training
+              </a>
+            </div>
+          </div>
+
+          <div className="w-full md:w-[30%] mt-12 md:mt-0">
+            <div className=" w-full">
+              <h1 className="text-[1.1rem] font-[Oswald] text-white mb-4">
+                Follow Us:
+              </h1>
+              <div className="flex my-12 space-x-8">
+                <a href="#">
+                  <IconBrandFacebook color="white" />
+                </a>
+                <a href="#">
+                  <IconBrandLinkedin color="white" />
+                </a>
+              </div>
+            </div>
+            <Divider
+              my="xs"
+              label={<span className="text-gray-400">or</span>}
+              labelPosition="center"
+            />
+            <h1 className="text-[1.1rem] font-[Oswald] text-white mb-4">
+              Write to Us:
+            </h1>
+            <section className="space-y-4" id="contact-us">
+              <Input
+                variant="filled"
+                placeholder="Your name"
+                label="Full name"
+              />
+              <Input variant="filled" placeholder="Your email" label="Email" />
+              <Textarea
+                variant="filled"
+                minRows={6}
+                placeholder="Message"
+                withAsterisk
+              />
+              <Button style={{ background: "rgb(185,28,28)" }} fullWidth>
+                Send
+              </Button>
+            </section>
+          </div>
         </div>
       </div>
-
-      <div className="w-full mt-12">
-        <p className="w-full text-center text-[0.9rem] text-gray-400">
-          Copyright © 2023. See{" "}
-          <Link href="https://stevekinuthia.vercel.app" className="underline">
+      <div className="bg-black w-full flex justify-between p-3">
+        <span class="text-white text-[0.8rem] font-light ">
+          Copyright © 2023 Serene PSL, All Rights Reserved.
+        </span>
+        <span class="text-white text-[0.7rem] font-light">
+          See{" "}
+          <a href="https://stevekinuthia.vercel.app" target="_blank">
             developer
-          </Link>
-        </p>
+          </a>
+        </span>
       </div>
-    </div>
+    </>
   );
 }
